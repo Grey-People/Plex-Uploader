@@ -11,5 +11,15 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\sass\" />
+    <Folder Include="wwwroot\lib\materialize\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\lib\bootstrap\.bower.json" />
+    <Content Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Remove="wwwroot\lib\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.css" />
+    <Content Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
   </ItemGroup>
 </Project>
