@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{E3828400-7664-4440-82C9-53FC50CEF617}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="PlexUploader/Models/VideoModel.cs">
+    <Files>
+      <File FileName="PlexUploader/Controllers/VideoController.cs" Line="7" Column="7" />
+      <File FileName="PlexUploader/Views/Video/Index.cshtml" Line="13" Column="46" />
+      <File FileName="PlexUploader/wwwroot/sass/site.scss" Line="178" Column="15" />
+      <File FileName="PlexUploader/Models/VideoModel.cs" Line="10" Column="24" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.PlexUploader PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

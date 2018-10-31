@@ -7,10 +7,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="MySql.Data" Version="8.0.13" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="wwwroot\lib\materialize\" />
+    <Folder Include="Views\Video\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="compilerconfig.json" />
@@ -21,6 +23,7 @@
     <Content Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
     <Content Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" />
     <Content Remove="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Remove="Views\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="compilerconfig.json" />
