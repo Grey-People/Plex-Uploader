@@ -26,6 +26,9 @@
     <None Include="compilerconfig.json" />
   </ItemGroup>
   <ItemGroup>
+    <Content Update="Views\Home\Upload.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
     <Content Update="wwwroot\css\site.css">
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>

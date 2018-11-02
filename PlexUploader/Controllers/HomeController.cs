@@ -11,7 +11,7 @@ namespace PlexUploader.Controllers {
         public IActionResult Index() {
             return View();
         }
-
+        
         public IActionResult About() {
             ViewData["Message"] = "Your application description page.";
 
@@ -26,6 +26,15 @@ namespace PlexUploader.Controllers {
 
         public IActionResult Privacy() {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Upload(int id) {
+            Debug.WriteLine("UPLOADED:" + id);
+
+            // TODO: DO DATABASE UPLOAD CODE HERE(?)
+
+            return RedirectToAction("", "");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
