@@ -1,0 +1,24 @@
+﻿@model IEnumerable<PlexUploader.Models.VideoModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <div class="row">
+        <h2 class="col s12 main-title">List of Videos</h2>
+        <div class="col m3 s12 videoList">@Html.DisplayNameFor(model => model.Add)</div>
+        <div class="col m3 s12 videoList">@Html.DisplayNameFor(model => model.Name)</div>
+        <div class="col m3 s12 videoList">@Html.DisplayNameFor(model => model.Type)</div>
+        <div class="col m3 s12 videoList">@Html.DisplayNameFor(model => model.Created)</div>
+        @foreach (var item in Model)
+        {
+            <div class="col m3 s12 videoSubList"> @Html.DisplayFor(modelItem => item.Add) </div>
+            <div class="col m3 s12 videoSubList"> @Html.DisplayFor(modelItem => item.Name) </div>
+            <div class="col m3 s12 videoSubList"> @Html.DisplayFor(modelItem => item.Type) </div>
+            <div class="col m3 s12 videoSubList"> @Html.DisplayFor(modelItem => item.Created) </div>
+        }
+    </div>
+
+
+</div>
