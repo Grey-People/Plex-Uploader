@@ -13,10 +13,12 @@
         <div class="col m3 s12 videoList">@Html.DisplayNameFor(model => model.Created)</div>
         @foreach (var item in Model)
         {
-            <div class="col m3 s12 videoSubList"> @Html.DisplayFor(modelItem => item.Add) </div>
-            <div class="col m3 s12 videoSubList"> @Html.DisplayFor(modelItem => item.Name) </div>
-            <div class="col m3 s12 videoSubList"> @Html.DisplayFor(modelItem => item.Type) </div>
-            <div class="col m3 s12 videoSubList"> @Html.DisplayFor(modelItem => item.Created) </div>
+            <div class="row">
+                <div class="col m3 s12 videoSubList"> @Html.DisplayFor(modelItem => item.Add) </div>
+                <div class="col m3 s12 videoSubList"> @Html.DisplayFor(modelItem => item.Name) </div>
+                <div class="col m3 s12 videoSubList"> @Html.DisplayFor(modelItem => item.Type) </div>
+                <div class="col m3 s12 videoSubList"> @Html.DisplayFor(modelItem => item.Created) </div>
+            s</div>
         }
     </div>
 

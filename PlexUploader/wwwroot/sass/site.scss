@@ -29,6 +29,23 @@ body {
     -webkit-text-stroke-color: black;
 }
 
+.videoList {
+    color: red;
+    font-size: 45px;
+    font-family: "Arial", Times, serif;
+    -webkit-text-fill-color: red;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+.videoSubList {
+    font-size: 35px;
+    font-family: "Arial", Times, serif;
+    -webkit-text-fill-color: blue;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
 button {
     background: transparent;
     border: 0;
@@ -254,3 +271,5 @@ form span {
 .box__restart:hover {
     color: #ffd800;
 }
+
+
