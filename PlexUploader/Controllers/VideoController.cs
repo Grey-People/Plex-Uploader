@@ -4,22 +4,61 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using PlexUploader.Models;
+using MySql.Data.MySqlClient;
 
 namespace PlexUploader.Controllers
 {
     public class VideoController : Controller
     {
 
+        private readonly IConfiguration configuration;
+        MySqlConnection conn;
+
+        public VideoController(IConfiguration config)
+        {
+            this.configuration = config;
+        }
+
         public IActionResult Index()
         {
+            string connStr = configuration.GetConnectionString("DefaultConnection");
+
             List<VideoModel> videos = new List<VideoModel>();
 
-            videos.Add(new VideoModel { Name = "How I met", Type = "Tv Show", Created = DateTime.Today });
-            videos.Add(new VideoModel { Name = "Skater", Type = "Tv Show", Created = DateTime.Today });
-            videos.Add(new VideoModel { Name = "Star Wars", Type = "Movie", Created = DateTime.Today });
-            videos.Add(new VideoModel { Name = "Wayne's World", Type = "Movie", Created = DateTime.Today });
+            try
+            {
+                conn = new MySqlConnection(connStr);
 
+                conn.Open();
+
+                string sql = "Select * from video";
+
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader rdr = cmd.ExecuteReader();
+
+
+
+                while (rdr.Read())
+                {
+                    videos.Add(new VideoModel { Name = rdr.GetString("name"), Type = rdr.GetString("type"), Created = rdr.GetDateTime("create_time") });
+                }
+
+            }
+            catch (MySqlException ex)
+            {
+                throw new Exception("The database connection state is Closed");
+
+            }
+            finally
+            {
+                if (conn != null)
+                {
+                    conn.Close();
+                }
+            }
+        
 
             return View(videos);
         }
